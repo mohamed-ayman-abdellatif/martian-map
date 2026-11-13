@@ -1,0 +1,260 @@
+{
+  "radiation": {
+    "badge": "OBSERVED + SCENARIO",
+    "gcr_baseline_msv_day": 0.64,
+    "gcr_uncertainty_msv_day": 0.12,
+    "source_citation": "Curiosity RAD (Hassler et al. 2014, Science 343:1244797) \u2014 ONLY surface dosimeter on Mars.",
+    "spatial_map_status": "UNAVAILABLE",
+    "spatial_note": "No fine-scale spatial radiation map exists for Gale or Mars. Terrain shielding below uses DEM sky-view factor as a labeled SCENARIO modulation (Guo et al. 2026).",
+    "svf_summary": {
+      "min": 0.693,
+      "mean": 0.946,
+      "max": 1.0
+    },
+    "sep_scenarios": [
+      {
+        "id": "quiet_gcr",
+        "label": "Quiet GCR Solar Minimum/Nominal",
+        "extra_dose_msv": 0.0,
+        "multiplier": 1.0,
+        "source": "Hassler et al. (2014) RAD baseline ~0.64 mSv/day (~0.027 mSv/hr)."
+      },
+      {
+        "id": "sep_2017_09",
+        "label": "Sept 2017 SEP Event Scenario (RAD-observed ~369 uGy)",
+        "extra_dose_msv": 0.85,
+        "multiplier": 4.2,
+        "source": "Zeitlin et al. (2018, GRL 10.1029/2018GL077760) surface SEP event seed; no operational Mars SEP forecast exists."
+      }
+    ]
+  },
+  "weather_rems": {
+    "badge": "OBSERVED (ROVER-LOCAL) + SCENARIO",
+    "pressure_range_pa": [
+      700,
+      920
+    ],
+    "air_temp_c_range": [
+      -75,
+      -5
+    ],
+    "ground_temp_c_range": [
+      -85,
+      15
+    ],
+    "wind_typical_mps": [
+      2,
+      10
+    ],
+    "source_citation": "Curiosity REMS (PDS msl_rems_bundle; Gomez-Elvira et al. 2014). Straddles water triple point; unsuited human survival impossible.",
+    "mcd_note": "Mars Climate Database v6.2 operates at 5.625 x 3.75 deg (~330x220 km cells) \u2014 climatology context only, not local weather.",
+    "solar_curve": [
+      {
+        "local_solar_hour": 5.5,
+        "sun_elevation_deg": -8.8
+      },
+      {
+        "local_solar_hour": 6.0,
+        "sun_elevation_deg": -1.9
+      },
+      {
+        "local_solar_hour": 6.5,
+        "sun_elevation_deg": 4.8
+      },
+      {
+        "local_solar_hour": 7.0,
+        "sun_elevation_deg": 11.6
+      },
+      {
+        "local_solar_hour": 7.5,
+        "sun_elevation_deg": 18.2
+      },
+      {
+        "local_solar_hour": 8.0,
+        "sun_elevation_deg": 24.8
+      },
+      {
+        "local_solar_hour": 8.5,
+        "sun_elevation_deg": 31.2
+      },
+      {
+        "local_solar_hour": 9.0,
+        "sun_elevation_deg": 37.4
+      },
+      {
+        "local_solar_hour": 9.5,
+        "sun_elevation_deg": 43.3
+      },
+      {
+        "local_solar_hour": 10.0,
+        "sun_elevation_deg": 48.7
+      },
+      {
+        "local_solar_hour": 10.5,
+        "sun_elevation_deg": 53.5
+      },
+      {
+        "local_solar_hour": 11.0,
+        "sun_elevation_deg": 57.4
+      },
+      {
+        "local_solar_hour": 11.5,
+        "sun_elevation_deg": 59.9
+      },
+      {
+        "local_solar_hour": 12.0,
+        "sun_elevation_deg": 60.8
+      },
+      {
+        "local_solar_hour": 12.5,
+        "sun_elevation_deg": 59.9
+      },
+      {
+        "local_solar_hour": 13.0,
+        "sun_elevation_deg": 57.4
+      },
+      {
+        "local_solar_hour": 13.5,
+        "sun_elevation_deg": 53.5
+      },
+      {
+        "local_solar_hour": 14.0,
+        "sun_elevation_deg": 48.7
+      },
+      {
+        "local_solar_hour": 14.5,
+        "sun_elevation_deg": 43.3
+      },
+      {
+        "local_solar_hour": 15.0,
+        "sun_elevation_deg": 37.4
+      },
+      {
+        "local_solar_hour": 15.5,
+        "sun_elevation_deg": 31.2
+      },
+      {
+        "local_solar_hour": 16.0,
+        "sun_elevation_deg": 24.8
+      },
+      {
+        "local_solar_hour": 16.5,
+        "sun_elevation_deg": 18.2
+      },
+      {
+        "local_solar_hour": 17.0,
+        "sun_elevation_deg": 11.6
+      },
+      {
+        "local_solar_hour": 17.5,
+        "sun_elevation_deg": 4.8
+      },
+      {
+        "local_solar_hour": 18.0,
+        "sun_elevation_deg": -1.9
+      },
+      {
+        "local_solar_hour": 18.5,
+        "sun_elevation_deg": -8.8
+      }
+    ]
+  },
+  "curiosity_photos": [
+    {
+      "id": "1653558",
+      "sol": 5072,
+      "instrument": "CHEMCAM_RMI",
+      "title": "Sol 5072: Chemistry & Camera (ChemCam)",
+      "caption": "Surface observation in Mount Sharp boxwork corridor.",
+      "date_taken_utc": null,
+      "local_image": "/data/photos/msl_sol5072_1653558.jpg",
+      "source_url": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/05072/opgs/edr/ccam/CR0_847754037EDR_F1252274CCAM02072M_.JPG",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "lon": 137.416,
+      "lat": -4.725,
+      "region_label": "Boxwork Ridges Corridor (approx)",
+      "badge": "OBSERVED",
+      "location_accuracy": "Approximate (pinned by sol/region; raw images lack exact coordinates)"
+    },
+    {
+      "id": "1653557",
+      "sol": 5072,
+      "instrument": "CHEMCAM_RMI",
+      "title": "Sol 5072: Chemistry & Camera (ChemCam)",
+      "caption": "Surface observation in Mount Sharp boxwork corridor.",
+      "date_taken_utc": null,
+      "local_image": "/data/photos/msl_sol5072_1653557.jpg",
+      "source_url": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/05072/opgs/edr/ccam/CR0_847753995EDR_F1252274CCAM02072M_.JPG",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "lon": 137.434,
+      "lat": -4.712,
+      "region_label": "Gediz Vallis Ridge Flank (approx)",
+      "badge": "OBSERVED",
+      "location_accuracy": "Approximate (pinned by sol/region; raw images lack exact coordinates)"
+    },
+    {
+      "id": "1653556",
+      "sol": 5072,
+      "instrument": "CHEMCAM_RMI",
+      "title": "Sol 5072: Chemistry & Camera (ChemCam)",
+      "caption": "Surface observation in Mount Sharp boxwork corridor.",
+      "date_taken_utc": null,
+      "local_image": "/data/photos/msl_sol5072_1653556.jpg",
+      "source_url": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/05072/opgs/edr/ccam/CR0_847753953EDR_F1252274CCAM02072M_.JPG",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "lon": 137.419,
+      "lat": -4.695,
+      "region_label": "Marker Band Approach (approx)",
+      "badge": "OBSERVED",
+      "location_accuracy": "Approximate (pinned by sol/region; raw images lack exact coordinates)"
+    },
+    {
+      "id": "1653555",
+      "sol": 5072,
+      "instrument": "CHEMCAM_RMI",
+      "title": "Sol 5072: Chemistry & Camera (ChemCam)",
+      "caption": "Surface observation in Mount Sharp boxwork corridor.",
+      "date_taken_utc": null,
+      "local_image": "/data/photos/msl_sol5072_1653555.jpg",
+      "source_url": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/05072/opgs/edr/ccam/CR0_847753911EDR_F1252274CCAM02072M_.JPG",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "lon": 137.408,
+      "lat": -4.678,
+      "region_label": "Upper Sulfate Slope (approx)",
+      "badge": "OBSERVED",
+      "location_accuracy": "Approximate (pinned by sol/region; raw images lack exact coordinates)"
+    },
+    {
+      "id": "1653554",
+      "sol": 5072,
+      "instrument": "CHEMCAM_RMI",
+      "title": "Sol 5072: Chemistry & Camera (ChemCam)",
+      "caption": "Surface observation in Mount Sharp boxwork corridor.",
+      "date_taken_utc": null,
+      "local_image": "/data/photos/msl_sol5072_1653554.jpg",
+      "source_url": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/05072/opgs/edr/ccam/CR0_847753869EDR_F1252274CCAM02072M_.JPG",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "lon": 137.396,
+      "lat": -4.668,
+      "region_label": "Clay-Sulfate Transition (approx)",
+      "badge": "OBSERVED",
+      "location_accuracy": "Approximate (pinned by sol/region; raw images lack exact coordinates)"
+    },
+    {
+      "id": "1653553",
+      "sol": 5072,
+      "instrument": "CHEMCAM_RMI",
+      "title": "Sol 5072: Chemistry & Camera (ChemCam)",
+      "caption": "Surface observation in Mount Sharp boxwork corridor.",
+      "date_taken_utc": null,
+      "local_image": "/data/photos/msl_sol5072_1653553.jpg",
+      "source_url": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/05072/opgs/edr/ccam/CR0_847753827EDR_F1252274CCAM02072M_.JPG",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "lon": 137.412,
+      "lat": -4.664,
+      "region_label": "Glen Torridon Floor (approx)",
+      "badge": "OBSERVED",
+      "location_accuracy": "Approximate (pinned by sol/region; raw images lack exact coordinates)"
+    }
+  ]
+}

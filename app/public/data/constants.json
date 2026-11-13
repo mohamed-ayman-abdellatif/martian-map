@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "ops_bbox_lonlat": [137.36, -4.75, 137.46, -4.65],
+  "crs": {
+    "name": "IAU_2015:49900 / Mars 2000 Sphere (Planetocentric East-Positive)",
+    "proj4": "+proj=longlat +R=3396190 +no_defs",
+    "radius_m": 3396190.0,
+    "deg_to_m_lat": 59274.7,
+    "ref_lat_deg": -4.70,
+    "cos_ref_lat": 0.996637
+  },
+  "constants": {
+    "mars_gravity_m_s2": {
+      "value": 3.71,
+      "units": "m/s^2",
+      "badge": "OBSERVED",
+      "source_title": "NASA NSSDC Mars Fact Sheet",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "note": "Working surface gravity value (fact sheet mean 3.73 m/s^2)."
+    },
+    "crew_body_mass_kg": {
+      "value": 80.0,
+      "range": [60.0, 100.0],
+      "units": "kg",
+      "badge": "SCENARIO",
+      "source_title": "Standard reference astronaut body mass for Pandolf carriage model",
+      "source_url": "https://www.lpi.usra.edu/lunar/artemis/NorcrossEtAl_NASA-TP-2010-216115_PlanetarySuitMetabolicCosts.pdf",
+      "note": "Scenario reference astronaut mass W."
+    },
+    "carried_load_default_kg": {
+      "value": 30.0,
+      "range": [10.0, 50.0],
+      "units": "kg",
+      "badge": "SCENARIO",
+      "source_title": "Scenario EVA tool + sample + pack mass L",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2017/02/eva-exp-0042_xeva_system_con_ops_rev_b_final_dtd_10192020_ref_doc.pdf",
+      "note": "User-configurable carried load L in kg."
+    },
+    "walk_v_max_mps": {
+      "value": 1.10,
+      "range": [0.60, 1.50],
+      "units": "m/s",
+      "badge": "SCENARIO",
+      "source_title": "Apollo Lunar Surface Journal 'Lunar Gaits' (working pace 1.1-2.2 km/h, walkback 3.6 km/h)",
+      "source_url": "https://www.nasa.gov/history/alsj/",
+      "note": "Reference level walking speed V_max; modulated by piecewise slope function V(theta)."
+    },
+    "pandolf_equation": {
+      "value": 1.0,
+      "formula": "M = 1.5*W + 2.0*(W+L)*(L/W)^2 + eta*(W+L)*(1.5*V^2 + 0.35*V*G)",
+      "units": "W",
+      "badge": "SCENARIO",
+      "source_title": "Pandolf, Givoni & Goldman (1977), J Appl Physiol 43(4):577-581",
+      "source_url": "https://doi.org/10.1152/jappl.1977.43.4.577",
+      "note": "1-g empirical load-carriage equation applied to Mars walk planning as a scenario model (untested at 0.38g); floored at HIDH suited minimum 144 W."
+    },
+    "suit_overhead_kappa": {
+      "value": 1.30,
+      "range": [1.20, 1.50],
+      "units": "multiplier",
+      "badge": "SCENARIO",
+      "source_title": "Norcross et al. (2010), NASA/TP-2010-216115 (MKIII 3/8-g suit overhead)",
+      "source_url": "https://www.lpi.usra.edu/lunar/artemis/NorcrossEtAl_NASA-TP-2010-216115_PlanetarySuitMetabolicCosts.pdf",
+      "note": "Suited locomotion overhead multiplier applied to Pandolf metabolic power."
+    },
+    "o2_energy_kj_per_l": {
+      "value": 21.1,
+      "range": [20.9, 21.2],
+      "units": "kJ / L O2",
+      "badge": "DERIVED",
+      "source_title": "Weir (1949) / Scott (2005) PMC2129144 (~2.9 mL O2/min per W)",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2129144/",
+      "note": "Standard mixed-diet respiratory exchange conversion between metabolic watts and O2 consumption."
+    },
+    "nominal_o2_tank_liters": {
+      "value": 420.0,
+      "range": [200.0, 600.0],
+      "units": "L O2 (STP equiv)",
+      "badge": "SCENARIO",
+      "source_title": "EMU Data Book Rev V (0.55 kg primary ~385 L + secondary reserve context)",
+      "source_url": "https://nlsp.nasa.gov/search/data/details/IDP-LSDA_HARDWARE-0000000000000562?dataType=HARDWARE",
+      "note": "Scenario consumables tank size slider; 0.55 kg O2 is ~385 L STP, 8h PLSS-class sortie context."
+    },
+    "max_slope_deg": {
+      "value": 15.0,
+      "range": [12.0, 20.0],
+      "units": "degrees",
+      "badge": "SCENARIO",
+      "source_title": "Apollo EVA slope experience (<25 deg accessible, Iqbal 2024) + Curiosity 23 deg rover reroute",
+      "source_url": "https://ui.adsabs.harvard.edu/abs/2024EPSC...17..196I/abstract",
+      "note": "Team planning hard limit governed by 5m/10m block max-slope (slope_max_deg); configurable default."
+    },
+    "return_reserve_fraction": {
+      "value": 0.25,
+      "range": [0.15, 0.40],
+      "units": "fraction",
+      "badge": "SCENARIO",
+      "source_title": "Anchored conceptually to NASA EVA Walkback Test (NASA/TP-2009-214796)",
+      "source_url": "https://www.lpi.usra.edu/lunar/artemis/NorcrossEtAl_NASA-TP-2009-214796_EVA%20Walkback%20Test.pdf",
+      "note": "Team policy assumption (25% consumables reserve kept for turn-back / PNR)."
+    },
+    "rad_baseline_msv_per_day": {
+      "value": 0.64,
+      "uncertainty": 0.12,
+      "units": "mSv/day",
+      "badge": "OBSERVED",
+      "source_title": "Hassler et al. (2014), Science 343:1244797 (Curiosity RAD)",
+      "source_url": "https://doi.org/10.1126/science.1244797",
+      "note": "Single roving point measurement at Curiosity in Gale Crater; no spatial radiation map exists."
+    }
+  }
+}

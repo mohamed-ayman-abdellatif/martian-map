@@ -25,6 +25,7 @@ official "no pre-work" rule; build happens inside the event window).
 | 5 | [`competition-overview.md`](competition-overview.md) | Official requirements vs our proposal, mapping table, site choice, open decisions |
 | 6 | [`technical-approaches.md`](technical-approaches.md) | Verified data inventory, claim verdicts, model constants, architecture recommendation, honesty guardrails |
 | 7 | [`24-48-hour-plan.md`](24-48-hour-plan.md) | Must/Should/Stretch scope, phase plan, acceptance evidence, risks |
+| 7b | [`architecture.md`](architecture.md) | Phase A1 system architecture, CRS/F1–F8 specs, and Engine ↔ UI JSON contracts |
 | 8 | [`research/mapping-options.md`](research/mapping-options.md), [`research/routing-options.md`](research/routing-options.md) | Deep evidence: datasets/live checks/CRS traps; graph/algorithms/PNR — keep as evidence, see their Errata headers |
 | 9 | [`research/independent-architecture-review.md`](research/independent-architecture-review.md) | Adversarial review of the two research docs: verdicts V1–V13, findings F1–F8, pilot + gate |
 | 10 | [`documentation-review.md`](documentation-review.md) | Pre-publication audit (2026-11-13): links, consistency, F1–F8 integration, .gitignore — verdict PASS |

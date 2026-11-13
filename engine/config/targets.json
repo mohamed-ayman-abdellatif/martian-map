@@ -1,0 +1,60 @@
+{
+  "habitat": {
+    "id": "hab_mount_sharp",
+    "name": "Scenario Habitat (Lower Mount Sharp Outpost)",
+    "lon": 137.386,
+    "lat": -4.672,
+    "badge": "SCENARIO",
+    "description": "Fictional flat staging site in the lower Mount Sharp clay-to-sulfate corridor (team scenario)."
+  },
+  "targets": [
+    {
+      "id": "site_boxwork_2025",
+      "name": "2025 Curiosity Boxwork Veins Ridge",
+      "category": "Boxwork / Groundwater Veins",
+      "lon": 137.416,
+      "lat": -4.726,
+      "badge": "OBSERVED",
+      "geologic_unit": "Htu (Hesperian transition undivided, SIM 3292)",
+      "evidence": "Boxwork veins identified by Curiosity surface imaging (2025), hosted in the CRISM-mapped polyhydrated sulfate unit (~18-200 m/px).",
+      "source_url": "https://www.jpl.nasa.gov/news/nasas-curiosity-mars-rover-starts-unpacking-boxwork-formations",
+      "science_priority": 1
+    },
+    {
+      "id": "site_gediz_sulfate",
+      "name": "Gediz Vallis Sulfate Channel Deposit",
+      "category": "Hydrated Sulfates",
+      "lon": 137.438,
+      "lat": -4.710,
+      "badge": "DERIVED",
+      "geologic_unit": "Htu (Sulfate-bearing Mount Sharp strata)",
+      "evidence": "Hydrated sulfate spectral indicator in MRO CRISM MTRDR observation HRL0000BABA / FRT0000B6F1 (~18-36 m/px, PDS Geosciences).",
+      "source_url": "https://pds-geosciences.wustl.edu/missions/mro/crism.htm",
+      "science_priority": 2
+    },
+    {
+      "id": "site_marker_band",
+      "name": "Marker Band Contact Bench",
+      "category": "Stratigraphic Contact",
+      "lon": 137.420,
+      "lat": -4.692,
+      "badge": "DERIVED",
+      "geologic_unit": "Htu / Lower Mound Contact",
+      "evidence": "Clay-to-sulfate transition bench documented in Fraeman et al. (2016) JGR-Planets & HiRISE stereo topography.",
+      "source_url": "https://doi.org/10.1002/2016JE005095",
+      "science_priority": 3
+    },
+    {
+      "id": "site_clay_butte",
+      "name": "Glen Torridon Smectite Clay Basin",
+      "category": "Fe/Mg Smectite Clays",
+      "lon": 137.410,
+      "lat": -4.662,
+      "badge": "DERIVED",
+      "geologic_unit": "Htu (Clay-bearing trough)",
+      "evidence": "Phyllosilicate/smectite clay spectral signature in MRO CRISM MTRDR HRL0000BABA (brphyj browse, PDS Geosciences) over low-slope floor.",
+      "source_url": "https://pds-geosciences.wustl.edu/missions/mro/crism.htm",
+      "science_priority": 4
+    }
+  ]
+}
